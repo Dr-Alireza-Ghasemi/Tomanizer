@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, 'Segoe UI', sans-serif; }
+    body {
+      width: 290px;
+      background: #141416;
+      color: #f4f4f5;
+      padding: 14px;
+      direction: rtl;
+      user-select: none;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #27272a;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    .title { font-size: 13px; font-weight: bold; color: #ffd400; }
+    .btn-refresh {
+      background: #ffd400;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      transition: 0.2s;
+    }
+    .btn-refresh:disabled { opacity: 0.5; cursor: wait; }
+    .status-bar {
+      font-size: 11px;
+      color: #a1a1aa;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .rates-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+    .rates-table tr {
+      border-bottom: 1px solid #232326;
+      height: 28px;
+    }
+    .rates-table td { padding: 4px 2px; vertical-align: middle; }
+    .curr-name { color: #d4d4d8; }
+    .curr-val { text-align: left; font-weight: 700; color: #ffd400; direction: ltr; }
+    .footer {
+      border-top: 1px solid #27272a;
+      padding-top: 10px;
+      text-align: center;
+      font-size: 10.5px;
+      color: #71717a;
+      line-height: 1.6;
+    }
+    .footer strong { color: #ffd400; font-weight: normal; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">نرخ ارزهای لحظه‌ای (تومان)</div>
+    <button class="btn-refresh" id="refreshBtn">بروزرسانی</button>
+  </div>
+
+  <div class="status-bar">
+    <span>منبع: <span id="sourceVal">...</span></span>
+    <span>ساعت: <span id="timeVal">--:--</span></span>
+  </div>
+
+  <table class="rates-table">
+    <tbody>
+      <tr><td class="curr-name">دلار آمریکا (USD)</td><td class="curr-val" id="rate-USD">...</td></tr>
+      <tr><td class="curr-name">یورو (EUR)</td><td class="curr-val" id="rate-EUR">...</td></tr>
+      <tr><td class="curr-name">درهم امارات (AED)</td><td class="curr-val" id="rate-AED">...</td></tr>
+      <tr><td class="curr-name">پوند انگلیس (GBP)</td><td class="curr-val" id="rate-GBP">...</td></tr>
+      <tr><td class="curr-name">یوان چین (CNY)</td><td class="curr-val" id="rate-CNY">...</td></tr>
+      <tr><td class="curr-name">لیر ترکیه (TRY)</td><td class="curr-val" id="rate-TRY">...</td></tr>
+      <tr><td class="curr-name">روپیه هند (INR)</td><td class="curr-val" id="rate-INR">...</td></tr>
+      <tr><td class="curr-name">ریال عمان (OMR)</td><td class="curr-val" id="rate-OMR">...</td></tr>
+      <tr><td class="curr-name">دینار کویت (KWD)</td><td class="curr-val" id="rate-KWD">...</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    توسعه داده شده توسط <strong>دکتر علیرضا قاسمی</strong>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+

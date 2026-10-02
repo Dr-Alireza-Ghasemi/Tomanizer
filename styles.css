@@ -1,0 +1,17 @@
+.toman-badge {
+  display: inline-block !important;
+  background-color: #ffd400 !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+  border-radius: 9999px !important;
+  padding: 1px 8px !important;
+  margin-left: 6px !important;
+  margin-right: 6px !important;
+  font-family: ui-sans-serif, system-ui, -apple-system, Tahoma, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  line-height: 1.5 !important;
+  vertical-align: middle !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
+  z-index: 9999 !important;
+}
